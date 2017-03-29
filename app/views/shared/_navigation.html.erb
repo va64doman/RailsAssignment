@@ -4,6 +4,8 @@
 		<li>About</li>
 		<li>Pricing</li>
 		<li>Blog</li>
-		<li><%= link_to('Login', 'login') %></li>
+		<% if current_page?(root_path) || current_page?(login_path) %>
+			<li><%= link_to "Login", login_path %></li>
+		<% end %>
 	</ul>
 </nav>

@@ -13,3 +13,23 @@
  */
 
  @import "bootstrap";
+
+ nav
+ {
+ 	& ul
+ 	{
+ 		padding-left: 0;
+ 		overflow: hidden;
+ 		list-style-type: none;
+
+ 		& li
+ 		{
+ 			display: inline;
+
+ 			& + li:before
+ 			{
+ 				content: "| ";
+ 			}
+ 		}
+ 	}
+ }

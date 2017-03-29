@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Users < ApplicationRecord
 	validates :name, presence: true
 
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -8,4 +8,6 @@ class UsersController < ApplicationController
 
 	has_secure_password
 	validates :password, presence: true
+
+	belongs_to :users_courses, optional: true
 end
