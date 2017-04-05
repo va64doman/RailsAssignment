@@ -1,20 +1,19 @@
 <% provide(:title, "Login") %>
 
-<%= render "shared/navigation" %>
-
 <% flash.each do |message_type, message| %>
 	<div><%= message %></div>
 <% end %>
 
+<h1>Login</h1>
 <%= form_for :session, url: login_path do |f| %>
-	<h1>Login</h1>
 	<p>
 		<%= f.label :email %>
 		<%= f.email_field :email %> 
 	</p>
+	
 	<p>
-	<%= f.label :password, "Password" %>
-	<%= f.password_field :password %> 
+		<%= f.label :password %>
+		<%= f.password_field :password %>
 	</p>
 
 	<%= f.submit "Login" %>

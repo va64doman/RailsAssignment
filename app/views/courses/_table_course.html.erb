@@ -1,0 +1,37 @@
+<% if current_user.admin != 1 %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Info</th>
+        <th>Description</th>
+        <th>Subject</th>
+        <th>Study</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @courses.each do |course| %>
+        <tr>
+          <td>
+            <%= course.name %>
+          </td>
+          <td>
+            <%= course.info %>
+          </td>
+          <td>
+            <%= course.description %>
+          </td>
+          <td>
+            <%= course.subject %>
+          </td>
+          <td>
+            <%= course.study %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<%= button_to "Modify Course", course_contents_index_path, :method => :get %>
+<% end %>

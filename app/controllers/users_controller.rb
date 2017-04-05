@@ -4,19 +4,20 @@ class UsersController < ApplicationController
 
 
 	def index
-        @users = Users.all
+        @users = User.all
 	end
 
 	def show
-        @user = Users.find(params[:id])
+        @user = User.find(params[:id])
+        @title = @user.name
 	end
 
 	def new
-        @user = Users.new
+        @user = User.new
 	end
 
 	def create
-		@user = Users.new(user_params)
+		@user = User.new(user_params)
         if @user.save
             redirect_to users_index_path
         else
@@ -25,33 +26,35 @@ class UsersController < ApplicationController
 	end
 
     def edit
-        @user = Users.find(params[:id])
+        @user = User.find(params[:id])
     end
 
     def update
-        @user = Users.find(params[:id])
+        @user = User.find(params[:id])
 
-        if @user.update(tvshow_params)
+        if @user.update(user_params)
             redirect_to users_index_path
         else
-            render 'edit'
+            render :edit
         end
     end
 
     def destroy
-        @user = Users.find(params[:id])
+        @user = User.find(params[:id])
         @user.destroy
         
-        redirect_to users_index_path
+        redirect_to users_url
     end
 
 	private
         def set_user
-    		@user = Users.find(params[:id])
+            if @user
+    		  @user = User.find(params[:id])
+            end
     	end
 
         def user_params
-    		params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    		params.require(:user).permit(:name, :email, :password, :password_confirmation, :admin)
     	end
 
     	def authenticate_user

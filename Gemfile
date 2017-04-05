@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'bcrypt'
+gem 'bcrypt', '3.1.11'
 
 gem 'rb-readline'
 
@@ -14,6 +14,7 @@ gem 'spring'
 # Use CSS framework 
 gem 'bootstrap'
 gem 'rails-assets-tether'
+gem 'bourbon'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'

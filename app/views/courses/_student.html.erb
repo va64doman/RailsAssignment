@@ -1,0 +1,4 @@
+<% if current_user.admin != 2 %>
+	<h1>Student</h1>
+<% end %>
+<%= button_to "View Content", course_contents_index_path, :method => :get %>

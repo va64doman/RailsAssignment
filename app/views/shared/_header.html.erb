@@ -1,0 +1,26 @@
+<header>
+	<nav>
+	<ul>
+		<li><%= link_to('Home', root_path) %></li>
+		<li>About</li>
+		<li>Pricing</li>
+		<li>Blog</li>
+		<% if !current_user %>
+			<li><%= link_to "Login", login_path %></li>
+		<% else %>
+			<li><%= link_to "Course", courses_index_path %></li>
+			<li><%= link_to "Logout", logout_path, method: :delete %></li>
+			<li>Welcome, <%= current_user.name.capitalize %> as 
+				<% case current_user.admin %>
+            	<% when 1 %>
+              		Student
+            	<% when 2 %>
+              		Lecturer
+            	<% else %>
+              		Admin
+          		<% end %>
+			</li>
+		<% end %>
+	</ul>
+	</nav>
+</header>

@@ -10,14 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170329103544) do
+ActiveRecord::Schema.define(version: 20170404065739) do
+
+  create_table "course_contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "courses_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["courses_id"], name: "index_course_contents_on_courses_id", using: :btree
+  end
 
   create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "info"
     t.string   "description"
     t.string   "subject"
-    t.string   "type"
+    t.string   "study"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -32,11 +41,12 @@ ActiveRecord::Schema.define(version: 20170329103544) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string  "name"
     t.string  "email"
-    t.string  "pasword_digest"
+    t.string  "password_digest"
     t.integer "admin"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "course_contents", "courses", column: "courses_id"
   add_foreign_key "user_courses", "courses", column: "courses_id"
   add_foreign_key "user_courses", "users", column: "users_id"
 end

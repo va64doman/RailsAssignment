@@ -1,0 +1,10 @@
+<% if current_user.admin != 3 %>
+	<h1>Lecturer</h1>
+<% end %>
+
+<% if current_user.admin != 2 %>
+	<h1>Admin</h1>
+	<%= link_to 'Show All Users', users_index_path %>
+<% end %>
+
+<%= render 'table_course' %>

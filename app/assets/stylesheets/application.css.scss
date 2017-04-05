@@ -1,0 +1,40 @@
+@import "bourbon";
+@import "bootstrap";
+
+.navigation
+{
+	& ul
+ 	{
+ 		padding-left: 0;
+ 		overflow: hidden;
+ 		list-style-type: none;
+
+ 		& li
+ 		{
+ 			display: inline;
+ 			color: #FFFFFF;
+
+ 			& + li:before
+ 			{
+ 				content: "| ";
+ 			}
+ 		}
+ 	}
+}
+
+header
+{
+	background-color: #FF2900;
+
+	nav
+ 	{
+ 		@extend .navigation
+ 	}
+}
+
+footer
+{
+	background-color: #FF2900;
+
+	@extend .navigation
+}

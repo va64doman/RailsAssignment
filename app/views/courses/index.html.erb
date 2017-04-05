@@ -1,0 +1,9 @@
+<% provide(:title, "#{current_user.name.capitalize} Course - Blackboard") %>
+
+<% if current_user.admin != 1 %>
+	<%= render 'lecturer' %>
+<% end %>
+
+<% if current_user.admin != 3 %>
+	<%= render 'student' %>
+<% end %>
