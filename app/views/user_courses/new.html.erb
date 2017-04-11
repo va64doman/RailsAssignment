@@ -1,0 +1,35 @@
+<h1>Create Association Between User and Course</h1>
+
+<%= form_for(@user_course) do |f| %>
+  	<% if @user_course.errors.any? %>
+    	<div id="error_explanation">
+      	<h2><%= pluralize(@user_course.errors.count, "error") %> prohibited this user from being saved:</h2>
+      	<ul>
+      		<% @user_course.errors.full_messages.each do |message| %>
+        		<li><%= message %></li>
+      		<% end %>
+    	</ul>
+    	</div>
+	<% end %>
+
+	<div class="field">
+		<h2>Select Course</h2>
+    	<%= f.select :course_id, Course.all.collect { |course| [ course.name, course.id ] } %>
+	</div>
+
+
+	<div class="field">
+		<h2>Select User</h2>
+    	<%= f.collection_check_boxes :user_id, User.all, :id, :name do |user| %>
+    		<div class="collection-check-box">
+      			<%= user.check_box %>
+      			<%= user.label %>
+      		</div>
+      	<% end %>
+    </div>
+	</div>
+
+	<div class="actions">
+    	<%= f.submit %>
+	</div>
+<% end %>

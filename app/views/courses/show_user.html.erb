@@ -1,0 +1,5 @@
+<h1>All Users in <%= @course.name %></h1>
+
+<% @course.user.each do |user| %>
+	<p><%= user.name %></p>
+<% end %>

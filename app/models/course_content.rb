@@ -1,3 +1,4 @@
 class CourseContent < ApplicationRecord
-	belongs_to :courses, optional: true
+	validates :name, :description, presence: true
+	belongs_to :course, optional: true
 end

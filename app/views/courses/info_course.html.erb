@@ -1,0 +1,99 @@
+<% provide(:title, "Course Details") %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Info</th>
+      <th>Description</th>
+      <th>Subject</th>
+      <th>Study</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if current_user.admin != 3 %>
+      <% current_user.course.each do |course| %>
+        <tr>
+          <td>
+            <%= course.name %>
+          </td>
+          <td>
+            <%= course.info %>
+          </td>
+          <td>
+            <%= course.description %>
+          </td>
+          <td>
+            <%= course.subject %>
+          </td>
+          <td>
+            <%= course.study %>
+          </td>
+          <td>
+            <%= link_to 'Show User', show_user_path(course), :method => :get %>
+            <% course.user.each do |user| %>
+              <p><%= user.name %></p>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to 'View Contents', content_path(course), :method => :get %>
+          </td>
+          <td>
+            <%= link_to 'Edit', edit_course_path(course) %>
+          </td>
+          <td>
+            <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    <% else %>
+      <% @courses.each do |course| %>
+        <tr>
+          <td>
+            <%= course.name %>
+          </td>
+          <td>
+            <%= course.info %>
+          </td>
+          <td>
+            <%= course.description %>
+          </td>
+          <td>
+            <%= course.subject %>
+          </td>
+          <td>
+            <%= course.study %>
+          </td>
+          <td>
+            <%= link_to 'Show User', show_user_path(course), :method => :get %>
+            <% course.user.each do |user| %>
+              <p><%= user.name %></p>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to 'View Contents', content_path(course), :method => :get %>
+          </td>
+          <td>
+            <%= link_to 'Edit', edit_course_path(course) %>
+          </td>
+          <td>
+            <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Course', new_courses_path %>
+
+<%= link_to 'Add Association', new_connect_path %>

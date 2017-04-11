@@ -11,27 +11,67 @@
     </thead>
 
     <tbody>
-      <% @courses.each do |course| %>
+      <% if current_user.admin != 3 %>
+        <% current_user.course.each do |course| %>
+          <tr>
+            <td>
+              <%= course.name %>
+            </td>
+            <td>
+              <%= course.info %>
+            </td>
+            <td>
+              <%= course.description %>
+            </td>
+            <td>
+              <%= course.subject %>
+            </td>
+            <td>
+              <%= course.study %>
+            </td>
+          </tr>
+        <% end %>
+      <% else %>
+        <% @courses.each do |course| %>
+          <tr>
+            <td>
+              <%= course.name %>
+            </td>
+            <td>
+              <%= course.info %>
+            </td>
+            <td>
+              <%= course.description %>
+            </td>
+            <td>
+              <%= course.subject %>
+            </td>
+            <td>
+              <%= course.study %>
+            </td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= button_to "Modify Courses", display_course_path, :method => :get %>
+<% end %>
+
+<% if current_user.admin != 3 %>
+  <table>
+    <tbody>
+      <% current_user.course.each do |course| %>
         <tr>
           <td>
-            <%= course.name %>
-          </td>
-          <td>
-            <%= course.info %>
-          </td>
-          <td>
-            <%= course.description %>
-          </td>
-          <td>
-            <%= course.subject %>
-          </td>
-          <td>
+            <%= course.name %>, <%= course.info %>, <%= course.description %>, <%= course.subject %>,
             <%= course.study %>
+          </td>
+          <td>
+            <%= button_to "View Contents", content_path(course), :method => :get %>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
-<%= button_to "Modify Course", course_contents_index_path, :method => :get %>
 <% end %>
