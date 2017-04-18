@@ -21,6 +21,8 @@
     <%= f.email_field :email %>
   </div>
 
+  <% # Password and password confirmation will ensure to convert into digest authentication %>
+
   <div class="field">
     <%= f.label :password %>
     <%= f.password_field :password %>
@@ -30,6 +32,8 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
+
+  <% # Display a drop down of different type of users %>
 
   <div class="field">
     <%= f.label :admin %>

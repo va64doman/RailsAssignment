@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+	#Set home root at session home
 	root to: 'sessions#home'
 
+	#Getting all resources from users, courses, contents, user courses and sessions
 	resource :users
 	resource :courses
 	resource :course_contents
@@ -17,6 +20,8 @@ Rails.application.routes.draw do
 		delete 'logout' => :destroy
 	end
 
+	#Course routes
+
 	get 'courses/index'
 
 	get 'course/:id', to: 'courses#show', :as => :course
@@ -29,23 +34,27 @@ Rails.application.routes.draw do
 
 	delete 'course/:id', to: 'courses#destroy'
 
-	get 'course/:id', to: 'courses#show_user', :as => :show_user
+	get 'course/:id', to: 'courses#show', :as => :show_course
 
 	controller :courses do
 		get 'display_course' => :info_course
 	end
 
-	get 'courses/:id', to: 'courses#content', :as => :content
+	#Content routes
 
-	get 'content/new', to: 'courses#new_content', :as => :new_content
+	get 'courses/:id', to: 'course_contents#content', :as => :content
 
-	post 'content/new', to: 'courses#create_content'
+	get 'courses/:id/new', to: 'course_contents#new', :as => :new_content
 
-	get 'content/:id', to: 'courses#edit_content', :as => :edit_content
+	get 'content/:id', to: 'course_contents#show', :as => :course_content
 
-	patch 'content/:id', to: 'courses#update_content', :as => :update_content
+	get 'contents/:id', to: 'course_contents#edit', :as => :edit_content
 
-	delete 'content/:id', to: 'courses#destroy_content', :as => :delete_content
+	patch 'contents/:id', to: 'course_contents#update', :as => :update_content
+
+	post 'content/:id', to: 'course_contents#destroy'
+
+	#User routes
 
 	get 'users/index'
 
@@ -59,8 +68,16 @@ Rails.application.routes.draw do
 
 	delete 'users/:id', to: 'users#destroy'
 
+	#User course routes
+
+	get 'user_courses', to: 'user_courses#index'
+
 	get 'user_course/new', to: 'user_courses#new', :as => :new_connect
 
 	post 'user_course/new', to: 'user_courses#create'
+
+	get 'user_course/:id', to: 'user_courses#show'
+
+	delete 'user_course/:id', to: 'user_courses#destroy', :as => :user_course
 
 end

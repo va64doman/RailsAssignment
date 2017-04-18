@@ -28,13 +28,41 @@ header
 
 	nav
  	{
- 		@extend .navigation
+ 		@extend .navigation;
  	}
 }
 
 footer
 {
 	background-color: #FF2900;
+	text-align: center;
 
-	@extend .navigation
+	@extend .navigation;
+}
+
+table{
+	margin: 0 auto;
+}
+
+img{
+	display: block;
+	margin: 0 auto;
+}
+
+h1, form{
+	text-align: center;
+}
+
+#notice{
+	background-color: #00FF00;
+	color: #006400;
+	text-align: center;
+	font-weight: bold;
+}
+
+#alert{
+	background-color: #FF0000;
+	color: #660000;
+	text-align: center;
+	font-weight: bold;
 }

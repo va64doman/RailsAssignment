@@ -1,13 +1,18 @@
 class CoursesController < ApplicationController
+	#Show all courses based on user's type
 	def index
+		#If it is an admin, then display all
 		if current_user.admin == 3
 			@courses = Course.all
+		#Else, display the user's courses
 		else
 			@courses = User.includes(:user_courses).includes(:course)
 		end
 	end
 
+	#This is for lecturer and admin to see all courses to be enable to modify the course
 	def info_course
+		#It is similar to index method, except student is not included
 		if current_user.admin == 3
 			@courses = Course.all
 		else
@@ -15,96 +20,60 @@ class CoursesController < ApplicationController
 		end
 	end
 
+	#Show the course's details with association with users
 	def show
-
+		@course = Course.find(params[:id])
 	end
 
+	#Build new course with contents (if applied)
 	def new
 		@course = Course.new
 		@course.course_contents.build
 	end
 
+	#Once clicked on 'Create New Course', it will saved based on the course params and return to display course path
 	def create
 		@course = Course.new(course_params)
         if @course.save
-            redirect_to display_course_path
+        	#If the current user is a lecturer, it creates a records of a relationship between the new course and user
+        	if current_user.admin == 2
+        		UserCourse.create(user_id: current_user.id, course_id: @course.id)
+        	end
+
+            redirect_to course_path(@course), notice: "Course has been created successfully"
         else
             render :new
         end
 	end
 
+	#Edit course's details only, edit content's details is from other page
 	def edit
 		@course = Course.find(params[:id])
 	end
 
+	#Update course's details
 	def update
 		@course = Course.find(params[:id])
 
         if @course.update(course_params)
-            redirect_to display_course_path
+            redirect_to course_path(@course), notice: "Course has been updated successfully"
         else
             render :edit
         end
 	end
 
+	#Delete the courses and should be enabled to delete all associations with the users
 	def destroy
 		@course = Course.find(params[:id])
         @course.destroy
         
-        redirect_to display_course_path
-	end
-
-	def show_user
-		@course = Course.find(params[:id])
-	end
-
-	def content
-		@course = Course.find(params[:id])
-		@contents = @course.course_contents
-	end
-
-	def new_content
-		@content = CourseContent.new
-	end
-
-	def create_content
-		@content = CourseContent.new(content_params)
-        if @content.save
-            redirect_to content_path(@content.course_id)
-        else
-            render :new_content
-        end
-	end
-
-	def edit_content
-		@content = CourseContent.find(params[:id])
-	end
-
-	def update_content
-		@content = CourseContent.find(params[:id])
-
-        if @content.update(content_params)
-            redirect_to content_path(@content.course_id)
-        else
-            render :edit_content
-        end
-	end
-
-	def destroy_content
-		@content = CourseContent.find(params[:id])
-
-		@content.destroy
-        
-        redirect_to course_index_path
+        redirect_to display_course_path, notice: "Course has been deleted with contents and relationship"
 	end
 
 	private
+		#Course params requires all course's details except description and contents (optional)
         def course_params
-    		params.require(:course).permit(:name, :info, :subject, :study,
+    		params.require(:course).permit(:name, :info, :description, :subject, :study,
     			course_contents_attributes: [:name, :description])
-    	end
-
-    	def content_params
-    		params.require(:course_content).permit(:name, :description, :course_id)
     	end
 end

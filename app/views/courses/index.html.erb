@@ -1,8 +1,12 @@
 <% provide(:title, "#{current_user.name.capitalize} Course - Blackboard") %>
 
+<% # If current user is admin or lecturer, then show appearance from the lecturer file %>
+
 <% if current_user.admin != 1 %>
 	<%= render 'lecturer' %>
 <% end %>
+
+<% # If current user is student, then show appearance from the student file %>
 
 <% if current_user.admin != 3 %>
 	<%= render 'student' %>

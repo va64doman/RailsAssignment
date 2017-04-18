@@ -1,0 +1,19 @@
+<% provide(:title, "Course Content") %>
+<p id="notice"><%= notice %></p>
+<h1>Course Contents : <%= @course.name %></h1>
+
+<% if current_user.admin != 1 %>
+	<%= link_to 'Create New Contents', new_content_path %>
+<% end %>
+
+<% # Display all contents based on course %>
+
+<% @contents.each do |contents| %>
+	<hr>
+	<h2><%= contents.name %></h2>
+	<p><%= contents.description %></p>
+	<% if current_user.admin != 1 %>
+		<%= link_to 'Edit', edit_content_path(contents) %>
+		<%= link_to 'Delete', contents, method: :delete_content, data: { confirm: 'Are you sure?' } %>
+	<% end %>
+<% end %>

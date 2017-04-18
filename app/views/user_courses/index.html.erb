@@ -1,0 +1,39 @@
+<% provide(:title, "Associations") %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Show All Associations</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>User Name</th>
+			<th>Course Name</th>
+			<th></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% # Display all relationship %>
+		<% @user_courses.each do |user_course| %>
+		<% # If current user is admin then display all, else display some based on current user's course %>
+			<tr>
+				<% if current_user.admin == 3 %>
+					<td><%= user_course.user.name %></td>
+					<td><%= user_course.course.name %></td>
+					<td><%= link_to 'Destroy', user_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				<% else %>
+					<% current_user.course.each do |course| %>
+						<% if user_course.course == course %>
+							<td><%= user_course.user.name %></td>
+							<td><%= user_course.course.name %></td>
+							<td><%= link_to 'Destroy', user_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+						<% end %>
+					<% end %>
+				<% end %>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to 'Back', display_course_path, :method => :get %>

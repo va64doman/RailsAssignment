@@ -12,80 +12,40 @@
       <th>Description</th>
       <th>Subject</th>
       <th>Study</th>
-      <th>User</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
+
+    <% # If current user is lecturer, then show all courses based on lecturer, else show all courses %>
+
     <% if current_user.admin != 3 %>
       <% current_user.course.each do |course| %>
         <tr>
-          <td>
-            <%= course.name %>
-          </td>
-          <td>
-            <%= course.info %>
-          </td>
-          <td>
-            <%= course.description %>
-          </td>
-          <td>
-            <%= course.subject %>
-          </td>
-          <td>
-            <%= course.study %>
-          </td>
-          <td>
-            <%= link_to 'Show User', show_user_path(course), :method => :get %>
-            <% course.user.each do |user| %>
-              <p><%= user.name %></p>
-            <% end %>
-          </td>
-          <td>
-            <%= link_to 'View Contents', content_path(course), :method => :get %>
-          </td>
-          <td>
-            <%= link_to 'Edit', edit_course_path(course) %>
-          </td>
-          <td>
-            <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </td>
+          <td><%= course.name %></td>
+          <td><%= course.info %></td>
+          <td><%= course.description %></td>
+          <td><%= course.subject %></td>
+          <td><%= course.study %></td>
+          <td><%= link_to 'Show Course', show_course_path(course), :method => :get %></td>
+          <td><%= link_to 'View Contents', content_path(course), :method => :get %></td>
+          <td><%= link_to 'Edit', edit_course_path(course) %></td>
+          <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     <% else %>
       <% @courses.each do |course| %>
         <tr>
-          <td>
-            <%= course.name %>
-          </td>
-          <td>
-            <%= course.info %>
-          </td>
-          <td>
-            <%= course.description %>
-          </td>
-          <td>
-            <%= course.subject %>
-          </td>
-          <td>
-            <%= course.study %>
-          </td>
-          <td>
-            <%= link_to 'Show User', show_user_path(course), :method => :get %>
-            <% course.user.each do |user| %>
-              <p><%= user.name %></p>
-            <% end %>
-          </td>
-          <td>
-            <%= link_to 'View Contents', content_path(course), :method => :get %>
-          </td>
-          <td>
-            <%= link_to 'Edit', edit_course_path(course) %>
-          </td>
-          <td>
-            <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </td>
+          <td><%= course.name %></td>
+          <td><%= course.info %></td>
+          <td><%= course.description %></td>
+          <td><%= course.subject %></td>
+          <td><%= course.study %></td>
+          <td><%= link_to 'Show Course', show_course_path(course), :method => :get %></td>
+          <td><%= link_to 'View Contents', content_path(course), :method => :get %></td>
+          <td><%= link_to 'Edit', edit_course_path(course) %></td>
+          <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     <% end %>
@@ -94,6 +54,10 @@
 
 <br>
 
-<%= link_to 'New Course', new_courses_path %>
+<% # Connect link to create new course and relationship, and see all relationships %>
 
+<%= link_to 'New Course', new_courses_path %>
+<br>
 <%= link_to 'Add Association', new_connect_path %>
+<br>
+<%= link_to 'Show Association', user_courses_path %>

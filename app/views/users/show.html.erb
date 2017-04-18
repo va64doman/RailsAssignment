@@ -2,6 +2,10 @@
 
 <p id="notice"><%= notice %></p>
 
+<h1><%= @user.name %></h1>
+
+<% # Display all user's information %>
+
 <p>
 	<strong>Name: </strong>
 	<%= @user.name %>
@@ -17,16 +21,29 @@
 	<%= @user.password_digest %>
 </p>
 
+<% # Display type of user by comparsion with the number from database %>
+
 <p>
 	<strong>Type of User: </strong>
 	<% case @user.admin %>
-		<% when 1 %>
-			Student
-		<% when 2 %>
-			Lecturer
-		<% else %>
-			Admin
-		<% end %>
+	<% when 1 %>
+		Student
+	<% when 2 %>
+		Lecturer
+	<% else %>
+		Admin
+	<% end %>
+</p>
+
+<% # Display all user's courses %>
+
+<p>
+	<strong>List of courses: </strong>
+	<ul>
+	<% @user.course.each do |course| %>
+        <li><%= course.name %></li>
+    <% end %>
+	</ul>
 </p>
 
 <%= link_to 'Back', users_index_path %>

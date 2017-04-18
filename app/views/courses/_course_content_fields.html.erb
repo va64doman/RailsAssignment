@@ -1,10 +1,18 @@
+<% # Display content form from new course %>
+
 <div class = "nested-fields">
 	<hr>
-	<%= f.label :name, required: true %>
-	<%= f.text_field :name %>
+	<div class="field">
+		<%= f.label :name, required: true %>
+		<%= f.text_field :name %>
+	</div>
 
-	<%= f.label :description, required: true %>
-	<%= f.text_area :description %>
+	<div class="field">
+		<%= f.label :description, required: true %>
+		<%= f.text_area :description %>
+	</div>
+
+	<% # Remove contents from course form %>
 
 	<%= link_to_remove_association 'Remove Content', f %>
 	<hr>

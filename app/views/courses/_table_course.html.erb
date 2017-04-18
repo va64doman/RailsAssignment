@@ -1,64 +1,58 @@
 <% if current_user.admin != 1 %>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Info</th>
-        <th>Description</th>
-        <th>Subject</th>
-        <th>Study</th>
-      </tr>
-    </thead>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Info</th>
+      <th>Description</th>
+      <th>Subject</th>
+      <th>Study</th>
+      <th></th>
+    </tr>
+  </thead>
 
-    <tbody>
-      <% if current_user.admin != 3 %>
-        <% current_user.course.each do |course| %>
-          <tr>
-            <td>
-              <%= course.name %>
-            </td>
-            <td>
-              <%= course.info %>
-            </td>
-            <td>
-              <%= course.description %>
-            </td>
-            <td>
-              <%= course.subject %>
-            </td>
-            <td>
-              <%= course.study %>
-            </td>
+  <tbody>
+    <% # Show all lecturer's courses %>
+
+    <% if current_user.admin == 2 %>
+      <% current_user.course.each do |course| %>
+        <tr>
+            <td><%= course.name %></td>
+            <td><%= course.info %></td>
+            <td><%= course.description %></td>
+            <td><%= course.subject %></td>
+            <td><%= course.study %></td>
+            <td><%= button_to "View Contents", content_path(course), :method => :get %></td>
           </tr>
         <% end %>
       <% else %>
-        <% @courses.each do |course| %>
+        <% # Show all courses for admin  %>
+
+        <% Course.all.each do |course| %>
           <tr>
-            <td>
-              <%= course.name %>
-            </td>
-            <td>
-              <%= course.info %>
-            </td>
-            <td>
-              <%= course.description %>
-            </td>
-            <td>
-              <%= course.subject %>
-            </td>
-            <td>
-              <%= course.study %>
-            </td>
+            <td><%= course.name %></td>
+            <td><%= course.info %></td>
+            <td><%= course.description %></td>
+            <td><%= course.subject %></td>
+            <td><%= course.study %></td>
+            <td><%= button_to "View Contents", content_path(course), :method => :get %></td>
           </tr>
-        <% end %>
+        <% end %>  
       <% end %>
     </tbody>
-  </table>
 
+  </table>
+<% end %>
+
+<% # Show "Modify Courses" button for lecturer and admin %>
+
+<% if current_user.admin != 1 %>
   <%= button_to "Modify Courses", display_course_path, :method => :get %>
 <% end %>
 
-<% if current_user.admin != 3 %>
+<% # Show course's details and "View Contents" button for student %>
+
+<% if current_user.admin == 1 %>
   <table>
     <tbody>
       <% current_user.course.each do |course| %>
@@ -67,9 +61,7 @@
             <%= course.name %>, <%= course.info %>, <%= course.description %>, <%= course.subject %>,
             <%= course.study %>
           </td>
-          <td>
-            <%= button_to "View Contents", content_path(course), :method => :get %>
-          </td>
+          <td><%= button_to "View Contents", content_path(course), :method => :get %></td>
         </tr>
       <% end %>
     </tbody>

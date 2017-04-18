@@ -6,5 +6,6 @@
 <% if current_user.admin != 2 %>
 	<h1>Admin</h1>
 	<%= render 'table_course' %>
-	<%= link_to 'Show All Users', users_index_path %>
+	<br />
+	<%= button_to 'Show All Users', users_index_path, :method => :get %>
 <% end %>
