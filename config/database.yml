@@ -33,6 +33,7 @@ test:
   timeout: 5000
 
 production:
+  database: J273270_Mini
   adapter: mysql2
   encoding: utf8
   pool: 5
