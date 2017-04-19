@@ -19,7 +19,7 @@ gem 'bourbon'
 
 gem 'cocoon'
 
-gem 'mysql2', '>= 0.3.18', '< 0.5', group: :production
+gem 'mysql2', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
