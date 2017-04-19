@@ -1,0 +1,859 @@
+  [1m[36mActiveRecord::SchemaMigration Load (68.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (61.8ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (61.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (60.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (61.8ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (61.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 07:18:31', '2017-04-18 07:18:31', 980190962)[0m
+  [1m[36mFixture Insert (63.3ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 07:18:31', '2017-04-18 07:18:31', 298486374)[0m
+  [1m[35m (92.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (59.7ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (59.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (61.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (59.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (161.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (60.5ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (58.9ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (166.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (150.9ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (97.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 07:32:12', '2017-04-18 07:32:12', 980190962)[0m
+  [1m[36mFixture Insert (91.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 07:32:12', '2017-04-18 07:32:12', 298486374)[0m
+  [1m[35m (160.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (94.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (61.8ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (60.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (59.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (60.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (79.6ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (63.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (64.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (61.5ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (62.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 07:52:20', '2017-04-18 07:52:20', 980190962)[0m
+  [1m[36mFixture Insert (59.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 07:52:20', '2017-04-18 07:52:20', 298486374)[0m
+  [1m[35m (66.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (59.8ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (60.9ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (62.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (59.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (60.5ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------
+UserControllerTest: test_Should_not_be_able_to_create_user_without_all_details
+------------------------------------------------------------------------------
+  [1m[35m (60.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (60.8ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` IS NULL LIMIT 1[0m
+  [1m[35m (60.9ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (59.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (60.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` IS NULL LIMIT 1[0m
+  [1m[35m (60.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (61.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (58.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (57.8ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (61.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (81.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (57.4ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (61.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 07:53:04', '2017-04-18 07:53:04', 980190962)[0m
+  [1m[36mFixture Insert (60.7ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 07:53:04', '2017-04-18 07:53:04', 298486374)[0m
+  [1m[35m (66.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (56.9ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------
+UserControllerTest: test_Should_not_be_able_to_create_user_without_all_details
+------------------------------------------------------------------------------
+  [1m[35m (57.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (58.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` IS NULL LIMIT 1[0m
+  [1m[35m (58.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (58.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (59.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` IS NULL LIMIT 1[0m
+  [1m[35m (57.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (57.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (70.6ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (57.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (57.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (61.8ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (63.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (62.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (59.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (61.1ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (62.7ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 08:39:28', '2017-04-18 08:39:28', 980190962)[0m
+  [1m[36mFixture Insert (60.1ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 08:39:28', '2017-04-18 08:39:28', 298486374)[0m
+  [1m[35m (111.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (60.9ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (62.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------
+UserControllerTest: test_Should_not_be_able_to_create_user_without_all_details
+------------------------------------------------------------------------------
+  [1m[35m (61.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (59.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' LIMIT 1[0m
+  [1m[35mSQL (61.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `password_digest`, `admin`) VALUES ('Person', 'person@example.com', '$2a$04$hHtHoyLiUyQAHi5MXNrMw.qk2HMENvBR5g5aGmvonYTbBrYdvzJTW', 3)[0m
+  [1m[35m (61.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (59.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (61.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' AND (`users`.`id` != 7) LIMIT 1[0m
+  [1m[35m (60.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (125.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (60.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (64.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (75.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (59.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (72.7ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (59.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (75.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (59.0ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (59.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 08:49:40', '2017-04-18 08:49:40', 980190962)[0m
+  [1m[36mFixture Insert (59.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 08:49:40', '2017-04-18 08:49:40', 298486374)[0m
+  [1m[35m (67.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (60.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (59.3ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (60.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (60.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (61.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (61.1ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (60.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (65.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (60.5ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.1ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 08:51:04', '2017-04-18 08:51:04', 980190962)[0m
+  [1m[36mFixture Insert (59.3ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 08:51:04', '2017-04-18 08:51:04', 298486374)[0m
+  [1m[35m (65.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (75.8ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------------------------------
+UserControllerTest: test_Should_not_be_able_to_create_user_without_all_details
+------------------------------------------------------------------------------
+  [1m[35m (59.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (59.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' LIMIT 1[0m
+  [1m[35mSQL (62.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `password_digest`, `admin`) VALUES ('Person', 'person@example.com', '$2a$04$HNVNS1.b.p8yLz1Ul.O4kuAOTPL44vZc.I3b/IQ6Nhrj.Kt51r0eC', 3)[0m
+  [1m[35m (62.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (59.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (59.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' AND (`users`.`id` != 8) LIMIT 1[0m
+  [1m[35m (59.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (70.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (65.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (61.0ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (63.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (60.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (61.3ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 09:37:42', '2017-04-18 09:37:42', 980190962)[0m
+  [1m[36mFixture Insert (63.7ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 09:37:42', '2017-04-18 09:37:42', 298486374)[0m
+  [1m[35m (66.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (62.9ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (60.5ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (60.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (63.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (60.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (60.5ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (59.8ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (59.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (60.7ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (61.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 09:37:58', '2017-04-18 09:37:58', 980190962)[0m
+  [1m[36mFixture Insert (62.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 09:37:58', '2017-04-18 09:37:58', 298486374)[0m
+  [1m[35m (65.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (61.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (59.2ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (61.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (62.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (62.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (62.5ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (46.9ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (49.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (62.5ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 09:42:54', '2017-04-18 09:42:54', 980190962)[0m
+  [1m[36mFixture Insert (54.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 09:42:54', '2017-04-18 09:42:54', 298486374)[0m
+  [1m[35m (78.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (51.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (62.6ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_create_user_without_all_details
+--------------------------------------------------------------------------
+  [1m[35m (74.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (57.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' LIMIT 1[0m
+  [1m[35m (57.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (62.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (62.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' LIMIT 1[0m
+  [1m[35m (59.8ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (62.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (74.6ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (62.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (46.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (74.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (59.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (58.9ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (80.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (59.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (59.1ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (59.5ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 09:59:49', '2017-04-18 09:59:49', 980190962)[0m
+  [1m[36mFixture Insert (59.5ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 09:59:49', '2017-04-18 09:59:49', 298486374)[0m
+  [1m[35m (68.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (69.7ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (60.5ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_update_user
+------------------------------------------------------
+  [1m[36mUser Load (60.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (59.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (61.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' AND (`users`.`id` != 9) LIMIT 1[0m
+  [1m[35m (59.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (59.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (57.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (61.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (96.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (113.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (57.8ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (57.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 10:02:11', '2017-04-18 10:02:11', 980190962)[0m
+  [1m[36mFixture Insert (58.0ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 10:02:11', '2017-04-18 10:02:11', 298486374)[0m
+  [1m[35m (79.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (80.8ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (58.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (58.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (63.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (78.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (60.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (60.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (59.4ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 10:02:53', '2017-04-18 10:02:53', 980190962)[0m
+  [1m[36mFixture Insert (75.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 10:02:53', '2017-04-18 10:02:53', 298486374)[0m
+  [1m[35m (70.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (64.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (58.9ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (59.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (61.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (57.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (60.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (57.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (72.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (66.0ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (59.7ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 10:28:22', '2017-04-18 10:28:22', 980190962)[0m
+  [1m[36mFixture Insert (57.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 10:28:22', '2017-04-18 10:28:22', 298486374)[0m
+  [1m[35m (70.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (45.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (74.6ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_update_user
+------------------------------------------------------
+  [1m[36mUser Load (81.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (63.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (63.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' AND (`users`.`id` != 9) LIMIT 1[0m
+  [1m[35m (57.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (63.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (60.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (59.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (60.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (93.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (58.7ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (59.0ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 10:41:38', '2017-04-18 10:41:38', 980190962)[0m
+  [1m[36mFixture Insert (60.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-18 10:41:38', '2017-04-18 10:41:38', 298486374)[0m
+  [1m[35m (74.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (59.9ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (72.9ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_update_user
+------------------------------------------------------
+  [1m[36mUser Load (61.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (61.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' AND (`users`.`id` != 9) LIMIT 1[0m
+  [1m[35m (60.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (59.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (65.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (64.9ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (68.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (66.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (60.6ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (63.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:10:42', '2017-04-19 01:10:42', 980190962)[0m
+  [1m[36mFixture Insert (60.1ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:10:42', '2017-04-19 01:10:42', 298486374)[0m
+  [1m[35m (86.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (64.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (64.7ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_delete_user
+------------------------------------------------------
+  [1m[36mUser Load (68.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (65.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserCourse Load (67.1ms)[0m  [1m[34mSELECT `user_courses`.* FROM `user_courses` WHERE `user_courses`.`user_id` = 9[0m
+  [1m[35mSQL (59.8ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 9[0m
+  [1m[35m (61.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (74.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (59.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (62.6ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (91.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (62.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (63.0ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (71.3ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:11:05', '2017-04-19 01:11:05', 980190962)[0m
+  [1m[36mFixture Insert (64.3ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:11:05', '2017-04-19 01:11:05', 298486374)[0m
+  [1m[35m (74.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.9ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (57.7ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_delete_user
+------------------------------------------------------
+  [1m[36mUser Load (58.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (58.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserCourse Load (58.8ms)[0m  [1m[34mSELECT `user_courses`.* FROM `user_courses` WHERE `user_courses`.`user_id` = 9[0m
+  [1m[35mSQL (60.0ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 9[0m
+  [1m[35m (57.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (71.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (65.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (59.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (65.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (58.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (58.8ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (57.7ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (58.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (58.5ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (58.5ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:12:40', '2017-04-19 01:12:40', 980190962)[0m
+  [1m[36mFixture Insert (85.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:12:40', '2017-04-19 01:12:40', 298486374)[0m
+  [1m[35m (67.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (68.3ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_delete_user
+------------------------------------------------------
+  [1m[36mUser Load (59.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (60.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserCourse Load (65.0ms)[0m  [1m[34mSELECT `user_courses`.* FROM `user_courses` WHERE `user_courses`.`user_id` = 9[0m
+  [1m[35mSQL (88.3ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 9[0m
+  [1m[35m (58.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (60.0ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (59.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (58.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (65.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (64.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (63.6ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (58.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (84.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (60.3ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:36:22', '2017-04-19 01:36:22', 980190962)[0m
+  [1m[36mFixture Insert (69.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:36:22', '2017-04-19 01:36:22', 298486374)[0m
+  [1m[35m (79.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (60.9ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (57.9ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+CourseControllerTest: test_Create_course_without_contents
+---------------------------------------------------------
+  [1m[35m (57.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (58.6ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `info`, `description`, `subject`, `study`, `created_at`, `updated_at`) VALUES ('Course', 'Info', 'Description', 'Subject', 'Full-Time', '2017-04-19 01:36:23', '2017-04-19 01:36:23')[0m
+  [1m[35m (60.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (71.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (72.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (79.8ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (63.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (62.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (59.3ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (63.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:38:19', '2017-04-19 01:38:19', 980190962)[0m
+  [1m[36mFixture Insert (59.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:38:19', '2017-04-19 01:38:19', 298486374)[0m
+  [1m[35m (106.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (62.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (62.7ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------
+CourseControllerTest: test_Create_course_without_contents
+---------------------------------------------------------
+  [1m[35m (62.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (60.3ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `info`, `description`, `subject`, `study`, `created_at`, `updated_at`) VALUES ('Course', 'Info', 'Description', 'Subject', 'Full-Time', '2017-04-19 01:38:20', '2017-04-19 01:38:20')[0m
+  [1m[35m (59.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (59.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (61.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (63.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (64.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (66.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (61.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (62.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (70.1ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.2ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:46:27', '2017-04-19 01:46:27', 980190962)[0m
+  [1m[36mFixture Insert (61.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:46:27', '2017-04-19 01:46:27', 298486374)[0m
+  [1m[35m (70.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (65.7ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (60.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+CourseControllerTest: test_Create_course_with_contents
+------------------------------------------------------
+  [1m[35m (63.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (63.3ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `info`, `description`, `subject`, `study`, `created_at`, `updated_at`) VALUES ('Course', 'Info', 'Description', 'Subject', 'Full-Time', '2017-04-19 01:46:28', '2017-04-19 01:46:28')[0m
+  [1m[35mSQL (61.1ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Content', 'Description', 3, '2017-04-19 01:46:28', '2017-04-19 01:46:28')[0m
+  [1m[35m (62.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (69.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (69.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (72.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (62.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (58.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (58.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (59.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (58.1ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (59.1ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:47:55', '2017-04-19 01:47:55', 980190962)[0m
+  [1m[36mFixture Insert (58.2ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:47:55', '2017-04-19 01:47:55', 298486374)[0m
+  [1m[35m (65.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.8ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (65.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+CourseControllerTest: test_Create_course_with_contents
+------------------------------------------------------
+  [1m[35m (58.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (57.8ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `info`, `description`, `subject`, `study`, `created_at`, `updated_at`) VALUES ('Course', 'Info', 'Description', 'Subject', 'Full-Time', '2017-04-19 01:47:57', '2017-04-19 01:47:57')[0m
+  [1m[35mSQL (57.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Content', 'Description', 4, '2017-04-19 01:47:57', '2017-04-19 01:47:57')[0m
+  [1m[35m (57.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (57.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (59.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (76.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (60.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (72.8ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (61.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (61.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (60.2ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (59.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:48:23', '2017-04-19 01:48:23', 980190962)[0m
+  [1m[36mFixture Insert (58.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:48:23', '2017-04-19 01:48:23', 298486374)[0m
+  [1m[35m (88.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (65.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (67.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+CourseControllerTest: test_Create_course_with_contents
+------------------------------------------------------
+  [1m[35m (67.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (66.5ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `info`, `description`, `subject`, `study`, `created_at`, `updated_at`) VALUES ('Course', 'Info', 'Description', 'Subject', 'Full-Time', '2017-04-19 01:48:24', '2017-04-19 01:48:24')[0m
+  [1m[35mSQL (61.3ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Contents', 'Description', 5, '2017-04-19 01:48:24', '2017-04-19 01:48:24')[0m
+  [1m[35m (59.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (59.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (60.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (65.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (65.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (62.4ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (60.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (62.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (62.1ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.7ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:48:49', '2017-04-19 01:48:49', 980190962)[0m
+  [1m[36mFixture Insert (60.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:48:49', '2017-04-19 01:48:49', 298486374)[0m
+  [1m[35m (65.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (59.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (63.8ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+CourseControllerTest: test_Create_course_with_contents
+------------------------------------------------------
+  [1m[35m (63.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (71.1ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `info`, `description`, `subject`, `study`, `created_at`, `updated_at`) VALUES ('Course', 'Info', 'Description', 'Subject', 'Full-Time', '2017-04-19 01:48:51', '2017-04-19 01:48:51')[0m
+  [1m[35mSQL (59.2ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Contents', 'Description', 6, '2017-04-19 01:48:51', '2017-04-19 01:48:51')[0m
+  [1m[35m (66.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (61.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (70.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (69.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mCourseContent Load (60.3ms)[0m  [1m[34mSELECT `course_contents`.* FROM `course_contents` WHERE `course_contents`.`course_id` = 6[0m
+  [1m[36mActiveRecord::SchemaMigration Load (62.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (64.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (72.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (60.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (60.3ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (70.7ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:49:11', '2017-04-19 01:49:11', 980190962)[0m
+  [1m[36mFixture Insert (67.5ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:49:11', '2017-04-19 01:49:11', 298486374)[0m
+  [1m[35m (65.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (61.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (63.5ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+CourseControllerTest: test_Create_course_with_contents
+------------------------------------------------------
+  [1m[35m (64.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (59.2ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `info`, `description`, `subject`, `study`, `created_at`, `updated_at`) VALUES ('Course', 'Info', 'Description', 'Subject', 'Full-Time', '2017-04-19 01:49:12', '2017-04-19 01:49:12')[0m
+  [1m[35mSQL (61.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Contents', 'Description', 7, '2017-04-19 01:49:12', '2017-04-19 01:49:12')[0m
+  [1m[35m (60.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (67.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (66.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCourseContent Load (59.7ms)[0m  [1m[34mSELECT `course_contents`.* FROM `course_contents` WHERE `course_contents`.`course_id` = 7[0m
+  [1m[35m (63.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (97.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (81.9ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (59.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (58.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (58.8ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (58.0ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:49:43', '2017-04-19 01:49:43', 980190962)[0m
+  [1m[36mFixture Insert (58.2ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:49:43', '2017-04-19 01:49:43', 298486374)[0m
+  [1m[35m (90.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (59.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (59.6ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+CourseControllerTest: test_Create_course_with_contents
+------------------------------------------------------
+  [1m[35m (58.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (57.2ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `info`, `description`, `subject`, `study`, `created_at`, `updated_at`) VALUES ('Course', 'Info', 'Description', 'Subject', 'Full-Time', '2017-04-19 01:49:45', '2017-04-19 01:49:45')[0m
+  [1m[35mSQL (57.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Contents', 'Description', 8, '2017-04-19 01:49:45', '2017-04-19 01:49:45')[0m
+  [1m[35m (59.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (59.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (61.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (62.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (62.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (60.9ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (58.8ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (74.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (62.3ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (58.5ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:52:57', '2017-04-19 01:52:57', 980190962)[0m
+  [1m[36mFixture Insert (58.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 01:52:57', '2017-04-19 01:52:57', 298486374)[0m
+  [1m[35m (71.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (59.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (73.8ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+CourseControllerTest: test_Create_course_with_contents
+------------------------------------------------------
+  [1m[35m (57.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (87.9ms)[0m  [1m[32mINSERT INTO `courses` (`name`, `info`, `description`, `subject`, `study`, `created_at`, `updated_at`) VALUES ('Course', 'Info', 'Description', 'Subject', 'Full-Time', '2017-04-19 01:52:58', '2017-04-19 01:52:58')[0m
+  [1m[35mSQL (59.8ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Contents', 'Description', 9, '2017-04-19 01:52:59', '2017-04-19 01:52:59')[0m
+  [1m[35m (58.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (62.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (58.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCourseContent Load (62.7ms)[0m  [1m[34mSELECT `course_contents`.* FROM `course_contents` WHERE `course_contents`.`course_id` = 9[0m
+  [1m[35m (79.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (66.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (59.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (63.8ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (59.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (63.2ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (64.5ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:08:01', '2017-04-19 02:08:01', 980190962)[0m
+  [1m[36mFixture Insert (67.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:08:01', '2017-04-19 02:08:01', 298486374)[0m
+  [1m[35m (75.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (72.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (77.7ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+UserCourseControllerTest: test_Create_relationship
+--------------------------------------------------
+  [1m[36mUser Load (66.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCourse Load (65.6ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 10 LIMIT 1[0m
+  [1m[35m (59.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (63.3ms)[0m  [1m[32mINSERT INTO `user_courses` VALUES ()[0m
+  [1m[35m (65.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (61.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (62.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (69.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (68.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (85.0ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (74.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (87.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (61.3ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (62.5ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:08:43', '2017-04-19 02:08:43', 980190962)[0m
+  [1m[36mFixture Insert (63.5ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:08:43', '2017-04-19 02:08:43', 298486374)[0m
+  [1m[35m (88.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (60.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (67.3ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+UserCourseControllerTest: test_Create_relationship
+--------------------------------------------------
+  [1m[36mUser Load (66.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCourse Load (61.8ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 10 LIMIT 1[0m
+  [1m[35m (60.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (102.6ms)[0m  [1m[32mINSERT INTO `user_courses` VALUES ()[0m
+  [1m[35m (67.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (63.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (63.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (67.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (60.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (61.9ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (59.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (91.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (61.2ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (64.1ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:09:50', '2017-04-19 02:09:50', 980190962)[0m
+  [1m[36mFixture Insert (63.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:09:50', '2017-04-19 02:09:50', 298486374)[0m
+  [1m[35m (72.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (64.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (60.8ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+UserCourseControllerTest: test_Create_relationship
+--------------------------------------------------
+  [1m[36mUser Load (62.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCourse Load (61.4ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 10 LIMIT 1[0m
+  [1m[35m (60.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (72.0ms)[0m  [1m[32mINSERT INTO `user_courses` (`user_id`, `course_id`) VALUES (9, 10)[0m
+  [1m[35m (87.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (59.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (59.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (77.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (63.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (64.8ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (59.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (59.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (59.6ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (59.0ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:12:01', '2017-04-19 02:12:01', 980190962)[0m
+  [1m[36mFixture Insert (60.7ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:12:01', '2017-04-19 02:12:01', 298486374)[0m
+  [1m[35m (69.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (86.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (58.6ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+UserCourseControllerTest: test_Create_relationship
+--------------------------------------------------
+  [1m[36mUser Load (63.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCourse Load (62.0ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 10 LIMIT 1[0m
+  [1m[35m (62.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (60.3ms)[0m  [1m[32mINSERT INTO `user_courses` (`user_id`, `course_id`) VALUES (9, 10)[0m
+  [1m[35m (59.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (63.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (71.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (64.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (61.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (57.5ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (71.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (58.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (58.4ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (58.7ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:40:25', '2017-04-19 02:40:25', 980190962)[0m
+  [1m[36mFixture Insert (58.2ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:40:25', '2017-04-19 02:40:25', 298486374)[0m
+  [1m[35m (63.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (90.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (57.7ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_delete_user
+------------------------------------------------------
+  [1m[36mUser Load (58.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (60.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserCourse Load (58.3ms)[0m  [1m[34mSELECT `user_courses`.* FROM `user_courses` WHERE `user_courses`.`user_id` = 9[0m
+  [1m[35mSQL (59.8ms)[0m  [1m[31mDELETE FROM `user_courses` WHERE `user_courses`.`id` = 5[0m
+  [1m[35mSQL (58.2ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 9[0m
+  [1m[35m (58.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (71.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (65.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (61.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (69.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (61.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (60.4ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (63.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (63.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (61.4ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (64.2ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:45:51', '2017-04-19 02:45:51', 980190962)[0m
+  [1m[36mFixture Insert (66.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:45:51', '2017-04-19 02:45:51', 298486374)[0m
+  [1m[35m (69.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (60.6ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (60.3ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------
+UserCourseControllerTest: test_Delete_Relationship_Only
+-------------------------------------------------------
+  [1m[36mUserCourse Load (83.1ms)[0m  [1m[34mSELECT  `user_courses`.* FROM `user_courses` WHERE `user_courses`.`id` = 5 LIMIT 1[0m
+  [1m[35m (61.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (63.9ms)[0m  [1m[31mDELETE FROM `user_courses` WHERE `user_courses`.`id` = 5[0m
+  [1m[35m (67.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUserCourse Exists (61.2ms)[0m  [1m[34mSELECT  1 AS one FROM `user_courses` WHERE `user_courses`.`id` = 5 LIMIT 1[0m
+  [1m[36mUser Exists (63.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mCourse Exists (62.6ms)[0m  [1m[34mSELECT  1 AS one FROM `courses` WHERE `courses`.`id` = 10 LIMIT 1[0m
+  [1m[35m (66.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (70.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (59.8ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (60.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (60.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (66.0ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (59.0ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:59:49', '2017-04-19 02:59:49', 980190962)[0m
+  [1m[36mFixture Insert (60.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 02:59:49', '2017-04-19 02:59:49', 298486374)[0m
+  [1m[35m (66.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (60.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (59.7ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------------------------
+UserCourseControllerTest: test_Delete_User/Course_with_Relationship
+-------------------------------------------------------------------
+  [1m[36mUser Load (85.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUserCourse Load (60.4ms)[0m  [1m[34mSELECT  `user_courses`.* FROM `user_courses` WHERE `user_courses`.`user_id` = 9 LIMIT 1[0m
+  [1m[35m (66.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserCourse Load (61.0ms)[0m  [1m[34mSELECT `user_courses`.* FROM `user_courses` WHERE `user_courses`.`user_id` = 9[0m
+  [1m[35mSQL (64.4ms)[0m  [1m[31mDELETE FROM `user_courses` WHERE `user_courses`.`id` = 5[0m
+  [1m[35mSQL (60.7ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 9[0m
+  [1m[35m (59.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (83.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (60.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (58.7ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (62.7ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (90.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (63.5ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.5ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:08:32', '2017-04-19 03:08:32', 980190962)[0m
+  [1m[36mFixture Insert (59.4ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:08:32', '2017-04-19 03:08:32', 298486374)[0m
+  [1m[35m (66.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (59.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (67.5ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_delete_user
+------------------------------------------------------
+  [1m[36mUser Load (65.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (60.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserCourse Load (59.3ms)[0m  [1m[34mSELECT `user_courses`.* FROM `user_courses` WHERE `user_courses`.`user_id` = 9[0m
+  [1m[35mSQL (66.3ms)[0m  [1m[31mDELETE FROM `user_courses` WHERE `user_courses`.`id` = 5[0m
+  [1m[35mSQL (58.8ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 9[0m
+  [1m[35m (58.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (61.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (59.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (65.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (74.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (62.5ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_create_user_with_all_details
+-----------------------------------------------------------------------
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (61.0ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (63.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (59.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (57.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (68.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (59.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (63.5ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (66.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (64.9ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:14:26', '2017-04-19 03:14:26', 980190962)[0m
+  [1m[36mFixture Insert (63.1ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:14:26', '2017-04-19 03:14:26', 298486374)[0m
+  [1m[35m (67.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (66.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (60.2ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------
+UserCourseControllerTest: test_Create_Content_Related_To_Course
+---------------------------------------------------------------
+  [1m[36mCourse Load (62.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 10 LIMIT 1[0m
+  [1m[35m (63.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (61.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Content', 'Description', 10, '2017-04-19 03:14:27', '2017-04-19 03:14:27')[0m
+  [1m[35m (65.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (67.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (61.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (60.6ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (59.0ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (59.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (60.4ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (62.2ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:15:29', '2017-04-19 03:15:29', 980190962)[0m
+  [1m[36mFixture Insert (58.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:15:29', '2017-04-19 03:15:29', 298486374)[0m
+  [1m[35m (69.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (58.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (59.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------
+UserCourseControllerTest: test_Create_Content_Related_To_Course
+---------------------------------------------------------------
+  [1m[36mCourse Load (62.7ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 10 LIMIT 1[0m
+  [1m[35m (60.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (60.1ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Content', 'Description', 10, '2017-04-19 03:15:31', '2017-04-19 03:15:31')[0m
+  [1m[35m (63.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (60.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (59.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (69.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (68.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (61.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (79.8ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (64.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (62.0ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (63.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:22:03', '2017-04-19 03:22:03', 980190962)[0m
+  [1m[36mFixture Insert (86.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:22:03', '2017-04-19 03:22:03', 298486374)[0m
+  [1m[35m (66.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (61.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (61.0ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------------------
+UserCourseControllerTest: test_Create_Content_Related_To_Course
+---------------------------------------------------------------
+  [1m[36mCourse Load (63.0ms)[0m  [1m[34mSELECT  `courses`.* FROM `courses` WHERE `courses`.`id` = 10 LIMIT 1[0m
+  [1m[35m (63.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (65.3ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `course_id`, `created_at`, `updated_at`) VALUES ('Content', 'Description', 10, '2017-04-19 03:22:04', '2017-04-19 03:22:04')[0m
+  [1m[35m (63.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (59.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (63.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mCourseContent Load (62.3ms)[0m  [1m[34mSELECT `course_contents`.* FROM `course_contents` WHERE `course_contents`.`course_id` = 10[0m
+  [1m[35m (69.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (65.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (64.3ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (61.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (67.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (71.7ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (60.9ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:31:34', '2017-04-19 03:31:34', 980190962)[0m
+  [1m[36mFixture Insert (84.6ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:31:34', '2017-04-19 03:31:34', 298486374)[0m
+  [1m[35m (71.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (65.3ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (61.3ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_create_user_with_all_details
+-----------------------------------------------------------------------
+  [1m[35m (64.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (64.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' LIMIT 1[0m
+  [1m[35m (358.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (63.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (61.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' LIMIT 1[0m
+  [1m[35m (70.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (67.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (62.4ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (63.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (62.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (64.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (62.0ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_update_user
+------------------------------------------------------
+  [1m[36mUser Load (64.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (62.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (65.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' AND (`users`.`id` != 9) LIMIT 1[0m
+  [1m[35m (63.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (62.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (66.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (64.5ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (62.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (63.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (61.7ms)[0m  [1m[31mDELETE FROM `course_contents`[0m
+  [1m[36mFixture Insert (63.2ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:34:49', '2017-04-19 03:34:49', 980190962)[0m
+  [1m[36mFixture Insert (66.0ms)[0m  [1m[32mINSERT INTO `course_contents` (`name`, `description`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', '2017-04-19 03:34:49', '2017-04-19 03:34:49', 298486374)[0m
+  [1m[35m (122.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (60.4ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (65.3ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_create_user_with_all_details
+-----------------------------------------------------------------------
+  [1m[35m (62.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (61.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' LIMIT 1[0m
+  [1m[35m (64.7ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (67.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (73.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' LIMIT 1[0m
+  [1m[35m (63.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (115.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (83.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+UserControllerTest: test_Should_be_able_to_find_user
+----------------------------------------------------
+  [1m[36mUser Load (64.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[36mUser Load (61.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (64.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (61.5ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_update_user
+------------------------------------------------------
+  [1m[36mUser Load (65.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (63.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (61.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'person@example.com' AND (`users`.`id` != 9) LIMIT 1[0m
+  [1m[35m (63.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (61.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (60.4ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+UserControllerTest: test_Should_be_able_to_delete_user
+------------------------------------------------------
+  [1m[36mUser Load (61.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (60.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUserCourse Load (62.5ms)[0m  [1m[34mSELECT `user_courses`.* FROM `user_courses` WHERE `user_courses`.`user_id` = 9[0m
+  [1m[35mSQL (66.3ms)[0m  [1m[31mDELETE FROM `user_courses` WHERE `user_courses`.`id` = 5[0m
+  [1m[35mSQL (64.7ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 9[0m
+  [1m[35m (66.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (66.1ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  [1m[35m (68.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (61.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (108.0ms)[0m  [1m[31mROLLBACK[0m

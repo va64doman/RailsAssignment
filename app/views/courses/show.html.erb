@@ -42,4 +42,13 @@
 	</ul>
 </p>
 
+<p>
+	<strong>List of contents: </strong>
+	<ul>
+	<% @course.course_contents.each do |content| %>
+        <li><%= content.name %></li>
+    <% end %>
+	</ul>
+</p>
+
 <%= link_to 'Back', display_course_path %>
