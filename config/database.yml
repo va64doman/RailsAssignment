@@ -33,5 +33,11 @@ test:
   timeout: 5000
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: J273270_3
+  password: 64Nisekoi!
+  host: 223.27.22.124
+  port: 3306
+  timeout: 5000
