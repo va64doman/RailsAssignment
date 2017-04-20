@@ -12,16 +12,16 @@
 
 ActiveRecord::Schema.define(version: 20170404065739) do
 
-  create_table "course_contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "course_contents", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
     t.integer  "course_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.index ["course_id"], name: "index_course_contents_on_course_id", using: :btree
+    t.index ["course_id"], name: "index_course_contents_on_course_id"
   end
 
-  create_table "courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.string   "info"
     t.string   "description"
@@ -31,22 +31,19 @@ ActiveRecord::Schema.define(version: 20170404065739) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "user_courses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "user_courses", force: :cascade do |t|
     t.integer "user_id"
     t.integer "course_id"
-    t.index ["course_id"], name: "index_user_courses_on_course_id", using: :btree
-    t.index ["user_id"], name: "index_user_courses_on_user_id", using: :btree
+    t.index ["course_id"], name: "index_user_courses_on_course_id"
+    t.index ["user_id"], name: "index_user_courses_on_user_id"
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string  "name"
     t.string  "email"
     t.string  "password_digest"
     t.integer "admin"
-    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  add_foreign_key "course_contents", "courses"
-  add_foreign_key "user_courses", "courses"
-  add_foreign_key "user_courses", "users"
 end
