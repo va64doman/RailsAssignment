@@ -21,6 +21,7 @@ class CourseContentsController < ApplicationController
 
         #Else, repeat it and display notice
         else
+            @course = Course.find(params[:course_content][:course_id])
             render :new
         end
 

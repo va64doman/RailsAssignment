@@ -20,12 +20,12 @@
 	<div class="field">
 		<h2>Select Course</h2>
       <% if current_user.admin != 3 %>
-    	<%= f.collection_check_boxes :course_id, current_user.course.all, :id, :name do |course| %>
-        <div class="collection-check-box">
-            <%= course.check_box %>
-            <%= course.label %>
-        </div>
-      <% end %>
+        <%= f.collection_check_boxes :course_id, current_user.course.all, :id, :name do |course| %>
+          <div class="collection-check-box">
+              <%= course.check_box %>
+              <%= course.label %>
+          </div>
+        <% end %>
       <% else %>
         <%= f.collection_check_boxes :course_id, Course.all, :id, :name do |course| %>
           <div class="collection-check-box">
