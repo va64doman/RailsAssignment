@@ -13,15 +13,20 @@ class CourseContentsController < ApplicationController
 
     #This method allows to create course content for this course
 	def create
-        #To avoid routing confusion, create method is in this controller only because there is no course id yet
-		@content = CourseContent.new(content_params)
-        #If it is save then redirect to this path with the identification
-        if @content.save
-            redirect_to content_path(@content.course_id), notice: "Content has been created successfully."
+        if !@course.nil?
+            #To avoid routing confusion, create method is in this controller only because there is no course id yet
+            @content = CourseContent.new(content_params)
+            #If it is save then redirect to this path with the identification
+            if @content.save
+                redirect_to content_path(@content.course_id), notice: "Content has been created successfully."
 
-        #Else, repeat it and display notice
+            #Else, repeat it and display notice
+            else
+                render :new
+            end
         else
-            render :new
+            flash[:alert] = "Name and Description can't be blank."
+            redirect_to new_content_path(params[:course_content][:course_id]) and return
         end
 	end
 

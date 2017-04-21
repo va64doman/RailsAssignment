@@ -9,6 +9,8 @@ default: &default
   pool: 5
   timeout: 5000
 
+#Developer only see development database
+
 development:
   <<: *default
   database: db/development.sqlite3
@@ -27,6 +29,7 @@ test:
   port: 3306
   timeout: 5000
 
+#Production see the server database
 production:
   database: J273270_Mini
   adapter: mysql2
