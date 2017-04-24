@@ -38,7 +38,7 @@ class CourseContentsController < ApplicationController
 
     #Update contents' details and return to content page where course id
     def update
-        @content = CourseContent.find(params[:id])
+        edit()
 
         if @content.update(content_params)
             redirect_to content_path(@content.course_id), notice: "Content has been updated successfully."
@@ -50,7 +50,7 @@ class CourseContentsController < ApplicationController
 
     #Delete contents and return to the content page where course id
     def destroy
-        @content = CourseContent.find(params[:id])
+        edit()
         @course = @content.course_id
 
         @content.destroy

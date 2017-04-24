@@ -48,12 +48,12 @@ class CoursesController < ApplicationController
 
 	#Edit course's details only, edit content's details is from other page
 	def edit
-		@course = Course.find(params[:id])
+		show()
 	end
 
 	#Update course's details
 	def update
-		@course = Course.find(params[:id])
+		show()
 
         if @course.update(course_params)
             redirect_to course_path(@course), notice: "Course has been updated successfully"
@@ -64,7 +64,7 @@ class CoursesController < ApplicationController
 
 	#Delete the courses and should be enabled to delete all associations with the users
 	def destroy
-		@course = Course.find(params[:id])
+		show()
         @course.destroy
         
         redirect_to display_course_path, notice: "Course has been deleted with contents and relationship"

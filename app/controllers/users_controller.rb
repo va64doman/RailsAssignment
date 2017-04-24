@@ -38,7 +38,7 @@ class UsersController < ApplicationController
 
     #Update the user's details and return to the user page
     def update
-        @user = User.find(params[:id])
+        edit()
 
         if @user.update(user_params)
             redirect_to user_path(@user), notice: "User has been updated successfully."
@@ -49,7 +49,8 @@ class UsersController < ApplicationController
 
     #Delete this user along with the association with the courses
     def destroy
-        @user = User.find(params[:id])
+        edit()
+        
         if @user.id == current_user.id
              redirect_to users_index_path, alert: "Cannot delete yourself."
         else
