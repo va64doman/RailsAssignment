@@ -64,7 +64,7 @@ class UsersController < ApplicationController
         #Set user if logged in or forgot to logout
         def set_user
             if @user
-    		  @user = User.find(params[:id])
+    		  edit()
             end
     	end
 
