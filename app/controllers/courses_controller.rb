@@ -66,7 +66,6 @@ class CoursesController < ApplicationController
 	def destroy
 		show()
         @course.destroy
-        
         redirect_to display_course_path, notice: "Course has been deleted with contents and relationship"
 	end
 

@@ -11,7 +11,7 @@
 			<% else %>
 				<li><%= link_to "Course", courses_index_path %></li>
 				<li><%= link_to "Logout", logout_path, method: :delete %></li>
-				<li>Welcome, <%= current_user.name.upcase %> as 
+				<li>Welcome, <%= current_user.name.upcase %> as
 					<% case current_user.admin %>
             		<% when 1 %>
               			Student

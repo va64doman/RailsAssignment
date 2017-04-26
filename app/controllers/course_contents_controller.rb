@@ -54,7 +54,6 @@ class CourseContentsController < ApplicationController
         @course = @content.course_id
 
         @content.destroy
-        
         redirect_to content_path(@course), notice: "Content has been deleted."
 
     end

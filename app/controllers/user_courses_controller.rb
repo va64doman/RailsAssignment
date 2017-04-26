@@ -2,7 +2,7 @@ class UserCoursesController < ApplicationController
 
 	#Display all of the associations between the user and course
 	def index
-		@user_courses = UserCourse.all
+		@user_courses = UserCourse.includes(:user, :course).all
 	end
 
 	#Display new blank page for creating association with user and course
@@ -31,7 +31,7 @@ class UserCoursesController < ApplicationController
 		#If user has not select course or user redirect to new user course and display alert
 		if params[:user_course][:course_id].size > 1
 			if params[:user_course][:user_id].size > 1
-				#Ignore nil in both params, create them into database 
+				#Ignore nil in both params, create them into database
 				params[:user_course][:course_id].reject(&:blank?).each do |course|
 					params[:user_course][:user_id].reject(&:blank?).each do |user|
 						#Check to see if the relationship has already exists, otherwise create new relationship.
@@ -63,7 +63,6 @@ class UserCoursesController < ApplicationController
 	def destroy
 		@user_course = UserCourse.find(params[:id])
         @user_course.destroy
-        
         redirect_to user_courses_path, notice: "Association has been deleted."
 	end
 end

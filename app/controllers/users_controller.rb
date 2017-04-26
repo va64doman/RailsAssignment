@@ -50,14 +50,8 @@ class UsersController < ApplicationController
     #Delete this user along with the association with the courses
     def destroy
         edit()
-        
-        if @user.id == current_user.id
-             redirect_to users_index_path, alert: "Cannot delete yourself."
-        else
-            @user.destroy
-            redirect_to users_index_path, notice: "User has been deleted with relationship."
-        end
-        
+        @user.destroy
+        redirect_to users_index_path, notice: "User has been deleted with relationship."
     end
 
 	private

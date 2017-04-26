@@ -6,13 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 #gem 'bcrypt', platforms: :ruby
-gem 'bcrypt','~>3.1.11' 
+gem 'bcrypt','~>3.1.11'
 
 gem 'rb-readline'
 
 gem 'spring'
 
-# Use CSS framework 
+# Use CSS framework
 gem 'bootstrap'
 gem 'rails-assets-tether'
 gem 'bourbon'
@@ -20,6 +20,13 @@ gem 'bourbon'
 gem 'cocoon'
 
 gem 'mysql2', '>= 0.3.18', '< 0.5', group: :production
+
+#Optimising the performance and code
+group :development do
+	gem 'bullet'
+	gem 'rails_best_practices'
+	gem 'traceroute'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'

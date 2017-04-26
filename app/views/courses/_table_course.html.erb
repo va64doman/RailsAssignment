@@ -1,22 +1,22 @@
 <% if current_user.admin != 1 %>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Info</th>
-      <th>Description</th>
-      <th>Subject</th>
-      <th>Study</th>
-      <th></th>
-    </tr>
-  </thead>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Info</th>
+        <th>Description</th>
+        <th>Subject</th>
+        <th>Study</th>
+        <th></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% # Show all lecturer's courses %>
+    <tbody>
+      <% # Show all lecturer's courses %>
 
-    <% if current_user.admin == 2 %>
-      <% current_user.course.each do |course| %>
-        <tr>
+      <% if current_user.admin == 2 %>
+        <% current_user.course.each do |course| %>
+          <tr>
             <td><%= course.name %></td>
             <td><%= course.info %></td>
             <td><%= course.description %></td>
@@ -37,7 +37,7 @@
             <td><%= course.study %></td>
             <td><%= button_to "View Contents", content_path(course), :method => :get %></td>
           </tr>
-        <% end %>  
+        <% end %>
       <% end %>
     </tbody>
 

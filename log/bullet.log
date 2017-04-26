@@ -1,0 +1,36 @@
+2017-04-26 10:40:57[WARN] user: Van Do
+GET /user_courses
+USE eager loading detected
+  UserCourse => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  C:/Users/Van Do/Documents/TAFE/Assignment/Software/S1/Cloud Computing/Mini-Assignment/Mini Web Application/Blackboard/app/views/user_courses/index.html.erb:22:in `block in _app_views_user_courses_index_html_erb__320706914_74519316'
+  C:/Users/Van Do/Documents/TAFE/Assignment/Software/S1/Cloud Computing/Mini-Assignment/Mini Web Application/Blackboard/app/views/user_courses/index.html.erb:18:in `_app_views_user_courses_index_html_erb__320706914_74519316'
+
+2017-04-26 10:40:57[WARN] user: Van Do
+GET /user_courses
+USE eager loading detected
+  UserCourse => [:course]
+  Add to your finder: :includes => [:course]
+Call stack
+  C:/Users/Van Do/Documents/TAFE/Assignment/Software/S1/Cloud Computing/Mini-Assignment/Mini Web Application/Blackboard/app/views/user_courses/index.html.erb:23:in `block in _app_views_user_courses_index_html_erb__320706914_74519316'
+  C:/Users/Van Do/Documents/TAFE/Assignment/Software/S1/Cloud Computing/Mini-Assignment/Mini Web Application/Blackboard/app/views/user_courses/index.html.erb:18:in `_app_views_user_courses_index_html_erb__320706914_74519316'
+
+2017-04-26 10:45:28[WARN] user: Van Do
+GET /user_courses
+USE eager loading detected
+  UserCourse => [:user]
+  Add to your finder: :includes => [:user]
+Call stack
+  C:/Users/Van Do/Documents/TAFE/Assignment/Software/S1/Cloud Computing/Mini-Assignment/Mini Web Application/Blackboard/app/views/user_courses/index.html.erb:22:in `block in _app_views_user_courses_index_html_erb__320706914_77276400'
+  C:/Users/Van Do/Documents/TAFE/Assignment/Software/S1/Cloud Computing/Mini-Assignment/Mini Web Application/Blackboard/app/views/user_courses/index.html.erb:18:in `_app_views_user_courses_index_html_erb__320706914_77276400'
+
+2017-04-26 10:45:28[WARN] user: Van Do
+GET /user_courses
+USE eager loading detected
+  UserCourse => [:course]
+  Add to your finder: :includes => [:course]
+Call stack
+  C:/Users/Van Do/Documents/TAFE/Assignment/Software/S1/Cloud Computing/Mini-Assignment/Mini Web Application/Blackboard/app/views/user_courses/index.html.erb:23:in `block in _app_views_user_courses_index_html_erb__320706914_77276400'
+  C:/Users/Van Do/Documents/TAFE/Assignment/Software/S1/Cloud Computing/Mini-Assignment/Mini Web Application/Blackboard/app/views/user_courses/index.html.erb:18:in `_app_views_user_courses_index_html_erb__320706914_77276400'
+

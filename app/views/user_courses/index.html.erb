@@ -19,14 +19,14 @@
 		<% # If current user is admin then display all, else display some based on current user's course %>
 			<tr>
 				<% if current_user.admin == 3 %>
-					<td><%= user_course.user.name %></td>
-					<td><%= user_course.course.name %></td>
+					<td><%= user_course.user_name %></td>
+					<td><%= user_course.course_name %></td>
 					<td><%= link_to 'Destroy', user_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 				<% else %>
 					<% current_user.course.each do |course| %>
 						<% if user_course.course == course %>
-							<td><%= user_course.user.name %></td>
-							<td><%= user_course.course.name %></td>
+							<td><%= user_course.user_name %></td>
+							<td><%= user_course.course_name %></td>
 							<td><%= link_to 'Destroy', user_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 						<% end %>
 					<% end %>
