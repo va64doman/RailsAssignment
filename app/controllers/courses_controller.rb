@@ -1,4 +1,6 @@
 class CoursesController < ApplicationController
+	before_action :authenticate_user
+	
 	#Show all courses based on user's type
 	def index
 		#If it is an admin, then display all

@@ -1,4 +1,5 @@
 class CourseContentsController < ApplicationController
+    before_action :authenticate_user
     #Display all contents based on course
     def content
         @course = Course.find(params[:id])

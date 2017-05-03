@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 #gem 'bcrypt', platforms: :ruby
-gem 'bcrypt','~>3.1.11'
+gem 'bcrypt','~> 3.1.11'
 
 gem 'rb-readline'
 

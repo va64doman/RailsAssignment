@@ -1,5 +1,6 @@
 class UserCoursesController < ApplicationController
-
+	before_action :authenticate_user
+	
 	#Display all of the associations between the user and course
 	def index
 		@user_courses = UserCourse.includes(:user, :course).all
