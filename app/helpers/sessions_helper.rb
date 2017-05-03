@@ -20,7 +20,7 @@ module SessionsHelper
 		@current_user = nil
 	end
 
-	 #Check if not logged in then go to login page
+	#Check if not logged in then go to login page for all controllers
     def authenticate_user
     	if !logged_in?
         	redirect_to login_url

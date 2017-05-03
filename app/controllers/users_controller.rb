@@ -66,11 +66,4 @@ class UsersController < ApplicationController
         def user_params
     		params.require(:user).permit(:name, :email, :password, :password_confirmation, :admin)
     	end
-
-        #Check if not logged in then go to login page
-    	def authenticate_user
-      		if !logged_in?
-        		redirect_to login_url
-      		end
-    	end
 end
