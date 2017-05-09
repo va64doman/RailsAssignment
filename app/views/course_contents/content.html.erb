@@ -1,5 +1,6 @@
 <% provide(:title, "Course Content") %>
 <p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
 <h1>Course Contents : <%= @course.name %></h1>
 
 <% if current_user.admin != 1 %>

@@ -2,6 +2,7 @@ class UsersController < ApplicationController
     #Before proceeding, check if the user has been set or the user does not require authentication
     before_action :set_user, only: [:show, :edit, :update, :destroy]
     before_action :authenticate_user
+    before_action :check_admin
 
     #Those controller methods are for admin only
 
@@ -12,8 +13,13 @@ class UsersController < ApplicationController
 
     #See the users' details
 	def show
-        @user = User.find(params[:id])
-        @title = @user.name
+        #Add exception for searching details by id
+        begin
+            @user = User.find(params[:id])
+            @title = @user.name
+        rescue ActiveRecord::RecordNotFound
+            redirect_to users_index_path, alert: "User is not existed."
+        end
 	end
 
     #Build new users
@@ -33,7 +39,11 @@ class UsersController < ApplicationController
 
     #Edit the username or password
     def edit
-        @user = User.find(params[:id])
+        begin
+            @user = User.find(params[:id])
+        rescue ActiveRecord::RecordNotFound
+            redirect_to users_index_path, alert: "User is not existed."
+        end
     end
 
     #Update the user's details and return to the user page
@@ -61,6 +71,13 @@ class UsersController < ApplicationController
     		  edit()
             end
     	end
+
+        #Add security for user
+        def check_admin
+            if current_user.admin != 3
+                redirect_to courses_index_path, alert: "You are not admin!"
+            end
+        end
 
         #Ensure that user has name, email, two same passwords and admin type
         def user_params

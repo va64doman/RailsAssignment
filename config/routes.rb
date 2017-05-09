@@ -76,8 +76,8 @@ Rails.application.routes.draw do
 
 	post 'user_course/new', to: 'user_courses#create'
 
-	get 'user_course/:id', to: 'user_courses#show'
-
 	delete 'user_course/:id', to: 'user_courses#destroy', :as => :user_course
+
+	match '*path', to: 'application#routing_error', :via => :all
 
 end

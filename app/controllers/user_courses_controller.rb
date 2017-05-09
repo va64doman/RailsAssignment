@@ -1,5 +1,6 @@
 class UserCoursesController < ApplicationController
 	before_action :authenticate_user
+	before_action :check_admin
 	
 	#Display all of the associations between the user and course
 	def index
@@ -66,4 +67,11 @@ class UserCoursesController < ApplicationController
         @user_course.destroy
         redirect_to user_courses_path, notice: "Association has been deleted."
 	end
+
+	private
+		def check_admin
+            if current_user.admin == 1
+                redirect_to courses_index_path, alert: "You are not admin/lecturer!"
+            end
+        end
 end

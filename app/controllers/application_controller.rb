@@ -17,4 +17,9 @@ class ApplicationController < ActionController::Base
   		redirect_to courses_index_url
   	end
   end
+
+  def routing_error
+    render file: "#{Rails.root}/public/404.html", status: 404
+  end
+
 end

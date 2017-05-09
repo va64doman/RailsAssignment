@@ -17,20 +17,45 @@ class CoursesController < ApplicationController
 		#It is similar to index method, except student is not included
 		if current_user.admin == 3
 			@courses = Course.all
-		else
+		elsif current_user.admin == 2
 			@courses = User.includes(:user_courses).includes(:course)
+		else
+			redirect_to courses_index_path, alert: "You are not admin/lecturer!"
 		end
 	end
 
 	#Show the course's details with association with users
 	def show
-		@course = Course.find(params[:id])
+		#Add exception for searching details and security of the courses.
+		begin
+			@count = 0
+			if current_user.admin != 1
+				@course = Course.find(params[:id])
+				@course.user.each do |user|
+					if current_user = user
+						@count += 1
+					end
+				end
+
+				if @count == 0 && current_user.admin == 2
+					redirect_to display_course_path, alert: "You have no access to this course."
+				end
+			else
+				redirect_to courses_index_path, alert: "You are not admin/lecturer!"
+			end
+		rescue ActiveRecord::RecordNotFound
+			redirect_to display_course_path, alert: "Course is not existed."
+		end
 	end
 
 	#Build new course with contents (if applied)
 	def new
-		@course = Course.new
-		@course.course_contents.build
+		if current_user.admin != 1
+			@course = Course.new
+			@course.course_contents.build
+		else
+			redirect_to courses_index_path, alert: "You are not admin/lecturer!"
+		end
 	end
 
 	#Once clicked on 'Create New Course', it will saved based on the course params and return to display course path
