@@ -7,7 +7,7 @@ class CourseContentsController < ApplicationController
             @course = Course.find(params[:id])
             if current_user.admin != 3
                 @course.user.each do |user|
-                    if current_user = user
+                    if user = current_user
                         @contents = @course.course_contents
                     end
                 end
@@ -64,7 +64,7 @@ class CourseContentsController < ApplicationController
             elsif current_user.admin == 2
                 @count = 0
                 @content.course.user.each do |user|
-                    if current_user = user
+                    if user = current_user
                         @count += 1
                     end
                 end

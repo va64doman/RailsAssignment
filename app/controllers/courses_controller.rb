@@ -32,7 +32,7 @@ class CoursesController < ApplicationController
 			if current_user.admin != 1
 				@course = Course.find(params[:id])
 				@course.user.each do |user|
-					if current_user = user
+					if user = current_user
 						@count += 1
 					end
 				end
